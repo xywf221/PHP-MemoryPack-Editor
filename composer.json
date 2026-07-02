@@ -1,0 +1,45 @@
+{
+    "name": "memory-pack/php-memory-pack-editor",
+    "description": "Payload editor and schema migration helpers for memory-pack/php-memory-pack.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "MemoryPack\\Editor\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MemoryPack\\Editor\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=8.4",
+        "memory-pack/php-memory-pack": "dev-master"
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.0 || ^4.0"
+    },
+    "scripts": {
+        "test": "vendor/bin/pest"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../php-meory-pack",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "name": "packagist.org",
+            "type": "composer",
+            "url": "https://repo.packagist.org"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
